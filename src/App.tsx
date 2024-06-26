@@ -16,13 +16,13 @@ function App() {
         className="bg-[#f7f7ff]  w-full h-full
        absolute -z-20"
       ></div>
-      <div className="font-bold text-[#6f7390] flex justify-center ">
+      <div className="font-bold text-3xl text-[#6f7390] flex justify-center m-10 ">
         Our Pricing
       </div>
-      <div className="flex justify-center gap-3 items-center flex-row text-[#aeaeba] relative font-bold text-[9px]">
+      <div className="flex justify-center gap-3 items-center flex-row text-[#aeaeba] relative font-bold text-md">
         <div className="">Annually</div>
-        <div className="bg-white left-[173px] h-4 rounded-full w-4 absolute"></div>
-        <div className="bg-[#7a7ee1] w-9 h-5 rounded-full"></div>
+        <div className="bg-white left-[169px] h-5 rounded-full w-5 absolute"></div>
+        <div className="bg-[#7a7ee1] w-12 h-7 rounded-full"></div>
         <div className="">Monthly</div>
       </div>
       <div className="w-[323px] h-[455px] text-sm  font-bold text-[#4c4f60] bg-white m-auto p-6 flex items-center justify-between flex-col">
