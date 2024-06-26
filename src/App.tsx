@@ -39,13 +39,33 @@ function Card({
   sendLimit: string;
 }) {
   return (
-    <div className="w-[323px] rounded-md h-[455px] text-sm  font-bold text-[#4c4f60] bg-white m-auto p-6 flex items-center justify-between flex-col ">
-      <div className="text-lg text-[#666882]">{name}</div>
+    <div
+      className={
+        name != "Professional"
+          ? "w-[323px] rounded-md h-[455px] text-sm  font-bold text-[#4c4f60] bg-white m-auto p-6 flex items-center justify-between flex-col"
+          : " w-[323px] rounded-md h-[455px] text-sm  font-bold text-white m-auto bg-[#9b9fee] p-6 flex items-center justify-between flex-col"
+      }
+    >
+      <div
+        className={
+          name != "Professional"
+            ? "text-lg text-[#666882]"
+            : "w-full  text-lg text-white flex flex-col gap-6 text-center"
+        }
+      >
+        {name}
+      </div>
       <div className="text-7xl flex items-center">
         <span className="text-4xl">$</span>
         {price}
       </div>
-      <div className="  w-full text-md text-[#6b6b83] flex flex-col gap-6 text-center ">
+      <div
+        className={
+          name != "Professional"
+            ? "w-full text-md text-[#6b6b83] flex flex-col gap-4 text-center "
+            : "w-full text-md text-white flex flex-col gap-4 text-center "
+        }
+      >
         <hr></hr>
         <div>{storage}</div>
         <hr></hr>
@@ -54,7 +74,13 @@ function Card({
         <div>{sendLimit}</div>
         <hr></hr>
       </div>
-      <div className="bg-[#7276e1] text-white font-semibold text-center  p-3 rounded-lg w-full">
+      <div
+        className={
+          name != "Professional"
+            ? "bg-[#7276e1] text-white fd text-center  p-3 rounded-lg w-full"
+            : "bg-white text-[#7276e1]  text-center  p-3 rounded-lg w-full"
+        }
+      >
         LEARN MORE
       </div>
     </div>
@@ -80,7 +106,7 @@ function App() {
         </div>
         <div className="flex justify-center gap-3 items-center flex-row text-[#aeaeba] relative font-bold text-md">
           <div className="">Annually</div>
-          <div className="bg-white left-[130px] h-6 rounded-full w-6 absolute"></div>
+          <div className="bg-white left-[130px] rounded-full w-6 h-6  absolute"></div>
           <div className="bg-[#7a7ee1] w-14 h-8 rounded-full"></div>
           <div className="">Monthly</div>
         </div>
