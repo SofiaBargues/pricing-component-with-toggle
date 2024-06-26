@@ -41,9 +41,10 @@ function Card({
   return (
     <div
       className={
-        name != "Professional"
-          ? "w-[323px] rounded-md h-[455px] text-sm  font-bold text-[#4c4f60] bg-white m-auto p-6 flex items-center justify-between flex-col"
-          : " w-[323px] rounded-md h-[455px] text-sm  font-bold text-white m-auto bg-[#9b9fee] p-6 flex items-center justify-between flex-col"
+        " w-[323px] rounded-md h-[455px] text-sm m-auto font-bold p-6 flex items-center justify-between flex-col " +
+        (name != "Professional"
+          ? "   text-[#4c4f60] bg-white "
+          : "  text-white bg-[#9b9fee]")
       }
     >
       <div
