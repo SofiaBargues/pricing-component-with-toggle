@@ -4,36 +4,42 @@
 const plans = [
   {
     name: "Basic",
-    price: "19.99",
+    monthlyPrice: "19.99",
+    annuallyPrice: "199.99",
     storage: "500 GB Storage",
     usersAllowed: "2 Users Allowed",
     sendLimit: "Send up to 3 GB",
   },
   {
     name: "Professional",
-    price: "24.99",
+    monthlyPrice: "24.99",
+    annuallyPrice: "249.99",
     storage: "1 TB Storage",
     usersAllowed: "5 Users Allowed",
     sendLimit: "Send up to 10 GB",
   },
   {
     name: "Master",
-    price: "39.99",
+    monthlyPrice: "39.99",
+    annuallyPrice: "399.99",
     storage: "2 TB Storage",
     usersAllowed: "10 Users Allowed",
     sendLimit: "Send up to 20 GB",
   },
 ];
 
+let annually = true;
 function Card({
   name,
-  price,
+  monthlyPrice,
+  annuallyPrice,
   storage,
   usersAllowed,
   sendLimit,
 }: {
   name: string;
-  price: string;
+  annuallyPrice: string;
+  monthlyPrice: string;
   storage: string;
   usersAllowed: string;
   sendLimit: string;
@@ -57,7 +63,7 @@ function Card({
       </div>
       <div className="text-7xl flex items-center">
         <span className="text-4xl">$</span>
-        {price}
+        {annually == false ? monthlyPrice : annuallyPrice}
       </div>
       <div
         className={
@@ -117,7 +123,11 @@ function App() {
           <div className="">Annually</div>
 
           <div className="bg-[#7a7ee1] w-14 h-8 rounded-full relative ">
-            <div className="bg-white left-[4px] top-1 rounded-full w-6 h-6 absolute"></div>
+            {annually == true ? (
+              <div className="bg-white left-[4px] top-1 rounded-full w-6 h-6 absolute"></div>
+            ) : (
+              <div className="bg-white left-[28px] top-1 rounded-full w-6 h-6 absolute"></div>
+            )}
           </div>
           <div className="">Monthly</div>
         </div>
@@ -126,7 +136,8 @@ function App() {
         {plans.map((plan) => (
           <Card
             name={plan.name}
-            price={plan.price}
+            monthlyPrice={plan.monthlyPrice}
+            annuallyPrice={plan.annuallyPrice}
             storage={plan.storage}
             usersAllowed={plan.usersAllowed}
             sendLimit={plan.sendLimit}
