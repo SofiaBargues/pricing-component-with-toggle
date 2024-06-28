@@ -81,10 +81,10 @@ function Card({
       </div>
       <div
         className={
-          " text-center  p-3 rounded-lg w-full " +
+          " text-center  p-3 rounded-lg w-full   " +
           (name != "Professional"
-            ? "bg-[#7276e1] text-white"
-            : "bg-white text-[#7276e1]")
+            ? "bg-[#7276e1] text-white hover:text-[#7276e1] hover:bg-white border-2 "
+            : " text-[#7276e1]  bg-white hover:text-white hover:bg-[#9b9fee]  border-2")
         }
       >
         LEARN MORE
@@ -103,13 +103,13 @@ function App() {
       ></img>
       <img
         src="./src/assets/bg-top.svg"
-        className="left-[50%] top-[-1%] absolute -z-10 md:block  hidden"
-        width={250}
+        className="left-[80%] top-[-1%] absolute -z-10 md:block  hidden"
+        width={380}
       ></img>
       <img
         src="./src/assets/bg-bottom.svg"
         className="left-[0%] bottom-[0%] absolute -z-10 md:block hidden"
-        width={290}
+        width={450}
       ></img>
       <div
         className="bg-[#f7f7ff] w-full h-full
