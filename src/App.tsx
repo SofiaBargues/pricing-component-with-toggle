@@ -49,9 +49,8 @@ function Card({
     >
       <div
         className={
-          name != "Professional"
-            ? "text-lg text-[#666882]"
-            : " text-lg text-white flex flex-col gap-6 text-center w-full "
+          "text-lg " +
+          (name != "Professional" ? " text-[#666882]" : " text-white ")
         }
       >
         {name}
