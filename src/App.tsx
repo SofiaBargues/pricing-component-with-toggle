@@ -51,7 +51,7 @@ function Card({
         className={
           name != "Professional"
             ? "text-lg text-[#666882]"
-            : "w-full  text-lg text-white flex flex-col gap-6 text-center"
+            : " text-lg text-white flex flex-col gap-6 text-center w-full "
         }
       >
         {name}
@@ -62,9 +62,8 @@ function Card({
       </div>
       <div
         className={
-          name != "Professional"
-            ? "w-full text-md text-[#6b6b83] flex flex-col gap-4 text-center "
-            : "w-full text-md text-white flex flex-col gap-4 text-center "
+          "  w-full text-md flex flex-col gap-4 text-center " +
+          (name != "Professional" ? "text-[#6b6b83] " : " text-white ")
         }
       >
         <hr></hr>
@@ -77,9 +76,10 @@ function Card({
       </div>
       <div
         className={
-          name != "Professional"
-            ? "bg-[#7276e1] text-white fd text-center  p-3 rounded-lg w-full"
-            : "bg-white text-[#7276e1]  text-center  p-3 rounded-lg w-full"
+          " text-center  p-3 rounded-lg w-full " +
+          (name != "Professional"
+            ? "bg-[#7276e1] text-white"
+            : "bg-white text-[#7276e1]")
         }
       >
         LEARN MORE
@@ -87,6 +87,7 @@ function Card({
     </div>
   );
 }
+
 function App() {
   return (
     <div className="font-montserrat flex flex-col relative overflow-hidden w-[374px] h-full  justify-center  m-auto">
