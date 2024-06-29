@@ -28,7 +28,7 @@ const plans = [
   },
 ];
 
-let annually = true;
+const annually = false;
 function Card({
   name,
   monthlyPrice,
@@ -122,7 +122,7 @@ function App() {
         <div className="flex justify-center gap-3 items-center flex-row text-[#aeaeba] font-bold text-md">
           <div className="">Annually</div>
 
-          <div className="bg-[#7a7ee1] w-14 h-8 rounded-full relative ">
+          <div className="bg-gradient-to-r from-[#aaace0] to-[#7276e1] w-14 h-8 rounded-full relative ">
             {annually == true ? (
               <div className="bg-white left-[4px] top-1 rounded-full w-6 h-6 absolute"></div>
             ) : (
