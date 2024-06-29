@@ -82,7 +82,7 @@ function App() {
               className={`${
                 pricingType === pricing.annually
                   ? "left-[4px] bg-white "
-                  : " left-[28px] bg-[#4c4f60]"
+                  : " left-[28px] bg-white"
               } transition-all duration-250 ease-in-out top-1 rounded-full w-6 h-6 absolute`}
             ></div>
           </button>
