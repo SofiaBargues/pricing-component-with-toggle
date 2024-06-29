@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from "react";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 const plans = [
@@ -28,8 +28,6 @@ const plans = [
   },
 ];
 
-let annually = true;
-
 function Card({
   name,
   monthlyPrice,
@@ -37,6 +35,7 @@ function Card({
   storage,
   usersAllowed,
   sendLimit,
+  toggle,
 }: {
   name: string;
   annuallyPrice: string;
@@ -44,6 +43,7 @@ function Card({
   storage: string;
   usersAllowed: string;
   sendLimit: string;
+  toggle: boolean;
 }) {
   return (
     <div
@@ -64,7 +64,7 @@ function Card({
       </div>
       <div className="text-7xl flex items-center">
         <span className="text-4xl">$</span>
-        {annually == false ? monthlyPrice : annuallyPrice}
+        {toggle === false ? monthlyPrice : annuallyPrice}
       </div>
       <div
         className={
@@ -94,7 +94,11 @@ function Card({
   );
 }
 
+// let toggle = true;
+
 function App() {
+  const [toggle, setToggle] = useState(true); // "annually" || "monthly"
+
   return (
     <div className="font-montserrat   flex flex-col md:justify-start relative overflow-hidden w-[374px] md:w-screen md:h-screen  h-full  justify-center  m-auto">
       <img
@@ -123,13 +127,16 @@ function App() {
         <div className="flex justify-center gap-3 items-center flex-row text-[#aeaeba] font-bold text-md">
           <div className="">Annually</div>
 
-          <div className="bg-gradient-to-r from-[#aaace0] to-[#7276e1] w-14 h-8 rounded-full relative ">
-            {annually == true ? (
+          <button
+            onClick={() => setToggle(!toggle)}
+            className="bg-gradient-to-r from-[#aaace0] to-[#7276e1] w-14 h-8 rounded-full relative "
+          >
+            {toggle == true ? (
               <div className="bg-white left-[4px] top-1 rounded-full w-6 h-6 absolute"></div>
             ) : (
               <div className="bg-white left-[28px] top-1 rounded-full w-6 h-6 absolute"></div>
             )}
-          </div>
+          </button>
           <div className="">Monthly</div>
         </div>
       </div>
@@ -142,6 +149,7 @@ function App() {
             storage={plan.storage}
             usersAllowed={plan.usersAllowed}
             sendLimit={plan.sendLimit}
+            toggle={toggle}
           />
         ))}
       </div>
