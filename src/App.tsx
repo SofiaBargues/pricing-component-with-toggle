@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="font-montserrat   flex flex-col md:justify-start relative overflow-hidden w-[374px] md:w-screen md:h-screen  h-full  justify-center  m-auto">
       <img
-        src="./src/assets/bg-top.svg"
+        src="public/bg-top.svg"
         className="left-[50%] top-[-1%] absolute -z-10 block md:hidden"
         width={550}
       ></img>
