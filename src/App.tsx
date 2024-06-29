@@ -33,6 +33,8 @@ export const pricing = {
   monthly: "monthly",
 };
 
+// let toggle = true
+
 function App() {
   const [pricingType, setPricingType] = useState(pricing.monthly);
 
@@ -76,11 +78,13 @@ function App() {
             onClick={handlePricing}
             className="bg-gradient-to-r from-[#aaace0] to-[#7276e1] w-14 h-8 rounded-full relative "
           >
-            {pricingType === pricing.annually ? (
-              <div className="bg-white left-[4px] top-1 rounded-full w-6 h-6 absolute"></div>
-            ) : (
-              <div className="bg-white left-[28px] top-1 rounded-full w-6 h-6 absolute"></div>
-            )}
+            <div
+              className={`${
+                pricingType === pricing.annually
+                  ? "left-[4px] bg-white "
+                  : " left-[28px] bg-[#4c4f60]"
+              } transition-all duration-250 ease-in-out top-1 rounded-full w-6 h-6 absolute`}
+            ></div>
           </button>
           <div className="">Monthly</div>
         </div>
