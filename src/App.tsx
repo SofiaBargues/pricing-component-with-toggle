@@ -49,17 +49,17 @@ function App() {
   return (
     <div className="font-montserrat   flex flex-col md:justify-start relative overflow-hidden w-[374px] md:w-screen md:h-screen  h-full  justify-center  m-auto">
       <img
-        src="public/bg-top.svg"
+        src="/bg-top.svg"
         className="left-[50%] top-[-1%] absolute -z-10 block md:hidden"
         width={550}
       ></img>
       <img
-        src="./src/assets/bg-top.svg"
+        src="/bg-top.svg"
         className="left-[80%] top-[-1%] absolute -z-10 md:block  hidden"
         width={380}
       ></img>
       <img
-        src="./src/assets/bg-bottom.svg"
+        src="/bg-bottom.svg"
         className="left-[0%] bottom-[0%] absolute -z-10 md:block hidden"
         width={450}
       ></img>
