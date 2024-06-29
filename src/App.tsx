@@ -28,7 +28,8 @@ const plans = [
   },
 ];
 
-const annually = false;
+let annually = true;
+
 function Card({
   name,
   monthlyPrice,
@@ -83,7 +84,7 @@ function Card({
         className={
           " text-center  p-3 rounded-lg w-full   " +
           (name != "Professional"
-            ? "bg-gradient-to-r from-[#aaace0] to-[#7276e1] text-white hover:text-[#7276e1] hover:bg-white border-2 "
+            ? "bg-gradient-to-r from-[#aaace0] to-[#7276e1] text-white hover:text-[#7276e1] hover:bg-gradient-to-r hover:from-white hover:to-white border-2 "
             : " text-[#7276e1]  bg-white hover:text-white hover:bg-[#9b9fee]  border-2")
         }
       >
